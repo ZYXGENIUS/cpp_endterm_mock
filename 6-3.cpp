@@ -7,16 +7,38 @@ class Fruit
     protected:
     int weight;
     public:
-    Fruit(int a)
+    Fruit(int a):weight(a)
     {
-        weight = a;
-        cout<<"Fruit Constructor";
+        cout<<"Fruit Constructor"<<endl;
     }
-    ~Fruit(void)
+    virtual ~Fruit(void)
     {
-
+        cout<<"Fruit Destructor"<<endl;
     }
-}
+    virtual void display(void)
+    {
+        cout<<"weight="<<weight<<endl;
+    }
+};
+class Banana:public Fruit
+{
+    private:
+    string origin;
+    public:
+    Banana(string a,int b):Fruit(b)
+    {
+        origin = a;
+        cout<<"Banana Constructor"<<endl;
+    }
+    ~Banana(void)
+    {
+        cout<<"Banana Destructor"<<endl;
+    }
+    void display(void)
+    {
+        cout<<"origin="<<origin<<",weight="<<weight<<endl;
+    }
+};
 /* 请在这里填写答案 */
 int main(){
     Fruit *pf=new Banana("Chongqing",10);;
