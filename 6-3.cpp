@@ -7,8 +7,9 @@ class Fruit
     protected:
     int weight;
     public:
-    Fruit(int a):weight(a)
+    Fruit(int a)
     {
+        weight=a;
         cout<<"Fruit Constructor"<<endl;
     }
     virtual ~Fruit(void)
