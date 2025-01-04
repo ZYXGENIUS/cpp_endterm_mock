@@ -7,7 +7,7 @@ class Fruit
     protected:
     int weight;
     public:
-    Fruit(int a)
+    Fruit(int a = 9)//这里传入了默认参数值
     {
         weight=a;
         cout<<"Fruit Constructor"<<endl;
@@ -26,7 +26,7 @@ class Banana:public Fruit
     private:
     string origin;
     public:
-    Banana(string a,int b):Fruit(b)
+    Banana(string a,int b)//Bannana会先调用Fruit的构造函数（不传参数值，但是Fruit没有默认构造函数），所以在这里必须初始化。
     {
         origin = a;
         cout<<"Banana Constructor"<<endl;
