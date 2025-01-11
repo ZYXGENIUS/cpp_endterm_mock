@@ -28,6 +28,7 @@ class Banana:public Fruit
     public:
     Banana(string a,int b)//Bannana会先调用Fruit的构造函数（不传参数值，但是Fruit没有默认构造函数），所以在这里必须初始化。
     {
+        weight = b;
         origin = a;
         cout<<"Banana Constructor"<<endl;
     }
